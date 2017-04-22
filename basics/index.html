@@ -1,0 +1,102 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        div {
+            border: 1px solid red;
+        }
+
+        span {
+            border: 1px solid blue;
+        }
+
+        div#simple {
+            background-color: blanchedalmond;
+        }
+
+        .basics2 {
+            background-color: #bada55;
+        }
+
+        .basics3 {
+            background-color: #c899ba;
+        }
+        .auto-margin{
+            margin: 0 auto;
+        }
+        .width-600 {
+            width: 600px;
+        }
+        .max-width-600 {
+            max-width: 600px;
+        }
+        .width-50__percent {
+            width: 50%;
+        }
+
+        .padding-30{
+            padding: 30px;
+        }
+        .border-30 {
+            border: 30px solid red;
+        }
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div id="simple">simple div block element</div>
+<span>Observation: Block element took 100% width</span>
+<hr/>
+<div class="basics2">multiple block elements - block element 1</div>
+<div class="basics2">multiple block elements - block element 2</div>
+<span>Observation: Each block element takes up 100% width and is placed in next row</span>
+<hr/>
+<div class="basics3">
+    <span>Inline element 1</span>
+    <a href="">Inline element 2</a>
+    <button>Inline button</button>
+    <label>label</label>
+</div>
+<span>Observation: Inline elements span across the same line next to each other. <br> b, big, i, small, tt
+abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var,
+a, bdo, br, img, map, object, q, script, span, sub, sup,
+button, input, label, select, textarea</span>
+<hr/>
+<div class="auto-margin width-600">Auto left right margin, centers the div block of width 600px</div>
+<div class="auto-margin width-50__percent">Auto left right margin, centers the div block of width 50%</div>
+<div class="auto-margin max-width-600">Auto left right margin, centers the div block of max-width 600.
+    If screen smaller than 600px, div stretches to the whole content width</div>
+
+<br/>
+
+<div class="auto-margin width-600">Box sizing - default content-box. width-600</div>
+<div class="auto-margin width-600 padding-30">Box sizing - default content-box. width-600 padding-30</div>
+<div class="auto-margin width-600 border-30">Box sizing - default content-box. width-600 border-30</div>
+<div class="auto-margin width-600 padding-30 border-30">Box sizing - default content-box. width-600 padding-30 border-30</div>
+
+<div class="border-box auto-margin width-600">Box sizing - default content-box. border-box width-600</div>
+<div class="border-box auto-margin width-600 padding-30">Box sizing - default content-box. border-box width-600 padding-30</div>
+<div class="border-box auto-margin width-600 border-30">Box sizing - default content-box. border-box width-600 border-30</div>
+<div class="border-box auto-margin width-600 padding-30 border-30">Box sizing - default content-box.
+    border-box width-600 padding-30 border-30</div>
+
+<div style="position: static">Static position. :)</div>
+<div style="position: relative; left: 40px; width: 600px"> Position relative. move left +40px <div style="left: 20px">
+    inside div left 20px (No effect if position is not set to relative)</div></div>
+
+<div style="position: fixed; right: 0px; bottom: 0px">fixed div. :) does not come in normal pageflow</div>
+
+
+<div style="position: relative; width: 600px"> Position relative.  <div style="position: absolute; left: 20px">
+    inside div1 position: absolute; left 20px</div></div>
+
+<div style="position: fixed; right: 0px; bottom: 0px; width: 600px">fixed div. <div style="position: absolute; left: 20px">
+    inside div2 position: absolute; left 20px</div></div>
+</body>
+
+</html>
