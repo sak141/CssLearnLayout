@@ -3,6 +3,7 @@
     <style>
         body {
             background-color: aqua;
+            margin-bottom: 50px;
         }
 
         div {
@@ -86,17 +87,49 @@ button, input, label, select, textarea</span>
     border-box width-600 padding-30 border-30</div>
 
 <div style="position: static">Static position. :)</div>
-<div style="position: relative; left: 40px; width: 600px"> Position relative. move left +40px <div style="left: 20px">
-    inside div left 20px (No effect if position is not set to relative)</div></div>
 
 <div style="position: fixed; right: 0px; bottom: 0px">fixed div. :) does not come in normal pageflow</div>
+<br/>
+<div class="width-600 padding-30">
+    <h3>Relative example</h3>
+    <ul>
+        <li>Box 1</li>
+        <li>Box 2</li>
+        <li>Box 3</li>
+        <li style="position: relative; top: 20px; left: 20px;">Box 4</li>
+        <li>Box 5</li>
+    </ul>
+    <div>Observation: Position it relative to its own current position by giving left and top pixels.
+        Space occupied by relative positioned element is not used by the subsequent elements.
+    </div>
+</div>
 
+<br/>
+<div style="position: relative" class="width-600 padding-30">
+    <h3>Absolute example</h3>
+    <ul>
+        <li>Box 1</li>
+        <li>Box 2</li>
+        <li>Box 3</li>
+        <li style="position: absolute; top: 20px; left: 20px;">Box 4</li>
+        <li>Box 5</li>
+    </ul>
+    <div>Observation: Position it relative to the non static positioned immediate ancestor by giving left and top pixels</div>
+</div>
+<br/>
+<div style="position: relative" class="width-600 padding-30">
+    <h3>Absolute example</h3>
+    <ul>
+        <li>Box 1</li>
+        <li>Box 2</li>
+        <li>Box 3</li>
+        <li style="position: absolute; ">Box 4</li>
+        <li>Box 5</li>
+    </ul>
+    <div>Observation: Providing position absolute removes the element from the standard flow and this space is taken over by the subsequent element,
+        but browser automatically calculates the current position of this absolutely positioned element.</div>
+</div>
 
-<div style="position: relative; width: 600px"> Position relative.  <div style="position: absolute; left: 20px">
-    inside div1 position: absolute; left 20px</div></div>
-
-<div style="position: fixed; right: 0px; bottom: 0px; width: 600px">fixed div. <div style="position: absolute; left: 20px">
-    inside div2 position: absolute; left 20px</div></div>
 </body>
 
 </html>
